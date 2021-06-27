@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3a34b6e3f0.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
     <nav class = "navbar">
         <div class="max-width">
-            <div class="logo"> <a href="#">Portfo<span>lio.</span></a></div>
+            <div class="logo"> <a href="#">nayaab<span>.is()</span></a></div>
             <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">.is()</a></li>
+                <li><a href="#projects">.projects()</a></li>
+                <li><a href="#collcurr">.edu()</a></li>
+                <li><a href="#bonus">.bonus()</a></li>
             </ul>
             <div class="menu-btn">
                 <i class='fas fa-bars'></i>
@@ -31,9 +35,15 @@
         <div class="max-width">
             <div class="home-content">
                 <div class="text-1">>Hello, my name is </div>
-                <div class="text-2">Nayaab C</div>
-                <div class="text-3">And I'm an Aspiring <span>Engineer</span></div>
+                <div class="text-2">Nayaab Chogle</div>
+                <div class="text-3">And I'm an Aspiring <span class="typing"></span></div>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/nayaab-chogle-56744b17a/" title=LinkedIn target="_blank"> <i class="fab fa-linkedin-square"></i></a>
+                    
+                    <a href="https://github.com/NayaabC" title=GitHub target="_blank"> <i class="fab fa-github"></i></a>
+                </div>
             </div>
+            
         </div>
     </section>
 
@@ -43,19 +53,153 @@
             <h2 class="title">PICamRU</h2>
             <div class="PICamRU-content">
                 <div class="column left">
-                    <img src="PICamRU/demoTestGif.gif">
+                    <img src="PICamRU/demoTest.gif">
                 </div>
                 <div class="column right">
                     <div class="text">
-                        I worked with my team to make a dashcam using a <span>Raspberry Pi</span>for our Senior Capstone Design project
+                        I worked with my team to make a dashcam using a <span>Raspberry Pi</span> for our Senior Capstone Design project
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel quisquam officiis laborum dicta blanditiis repellat fugit, rem, minima, ratione est voluptas eligendi voluptates dignissimos qui ipsam numquam nisi nobis reiciendis.</p>
+                    <p>The goal of this project was to reduce the amount of potentially harmful driving habits that would occur on the road.
+                       The back-end utilizes Google's sample TensorFlow object detection model with other <span>Python</span> libraries to identify these driving habits.
+                    </p>
                 </div>
             </div>
             <h3 class="DnD">Drip 'n' Dash</h3>
+            <div class="DnD-content">
+                <div class="column left">
+                    <div class="text">
+                        I worked with my team to make an Android Application using <span>Java</span> for our Software Engineering Semester Project
+                    </div>
+                    <p>This concept was made in order for registered students to earn money while completing menial chores for other students.
+                        Utilizing Google's Firebase allowed for a safe connection between the client and the "Dasher" to exist.
+                        Progress bars are present to show the status of the job, from the point where the job is accepted to the point of completion.
+                    </p>
+                </div>
+                <div class="column right">
+                    <img src="DnD/androidDemo.gif">
+                </div>
+            </div>
         </div>
     </section>
-    
+
+    <!-- about section start -->
+    <section class="collcurr" id="collcurr">
+        <div class="max-width">
+            <h2 class="title">curriculum.vitae(<span>RU</span>)</h2>
+            
+            <div class="software">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-code"></i>
+                        <div class="text">
+                            <div class="software-grid">
+                                <h4>Software</h4>
+                                <ul>
+                                    <li>
+                                        Programming Methodology
+                                        <br>
+                                        Data Structures and Algorithms - C++
+                                    </li>
+                                    <li>
+                                        Operating Systems and Parallel Processing
+                                        <br>
+                                        Linux, C
+                                    </li>
+                                    <li>
+                                        Computer Architecture
+                                        <br>
+                                        RISC-V Assembly Language
+                                    </li>
+                                    <li>
+                                        SWE Development Cycle
+                                        <br>
+                                        Java (Android Studio), UML Documentation
+                                    </li>
+                                    <li>
+                                        Information/Network Security
+                                        <br>
+                                        Encryption, Sock/Client - Python
+                                    </li>
+                                    <li>
+                                        Microcontrollers and Engineering
+                                        <br>
+                                        MATLAB, Arduino
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="hardware">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-microchip"></i>
+                        <div class="text">
+                            <div class="hardware-grid">
+                                <h4>Hardware</h4>
+                                <ul>
+                                    <li>
+                                        Digital Logic/System Design
+                                        <br>
+                                        SystemVerilog (Altera Quartus V), In-Lab Experiments
+                                    </li>
+                                    <li>
+                                        Comp Arch - Hardware/Theory
+                                        <br>
+                                        Datapaths, Memory Heiarchy, Multi-Core/Thread Processing
+                                    </li>
+                                    <li>
+                                        Circuit Implementation and Analysis
+                                        <br>
+                                        Computational Theory vs. In-Lab Experiments
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extras section start -->
+    <section class="bonus" id="bonus">
+        <div class="max-width">
+            <div class="bonus-grid">
+                <div class="columns hobbies">
+                    <h5>Also Busy With</h5>
+                    <ul>
+                        <li>Trying to be a better Programmer</li>
+                        <li>Learning Japanese asides from Hirigana/Katakana</li>
+                        <li>Weight Loss</li>
+                        <li>Digital Art</li>
+                        <li>Video Games <br> <span>(and anime)</span></li>
+                        <li>The Thought of Grad School</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="extra coding-anime">
+                <img src="images/coding-2.gif">
+            </div>
+            <div class="extra plab">
+                <img src="images/lab1.jpg">
+            </div>
+            <div class="extra jp">
+                <img src="images/berserk.jpg">
+            </div>
+            <div class="extra tt">
+                <img src="images/ttmeme.jpg">
+            </div>
+            <div class="extra thousand">
+                <img src="images/thousandSunnyHQ.gif">
+            </div>
+        </div>
+    </section>
+
+
     <script src="script.js"></script>
 </body>
 </html>
