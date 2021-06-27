@@ -26,7 +26,7 @@
 /* Triggered by script.js */
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background: purple;
     
 }
 
@@ -43,7 +43,7 @@
 }
 
 .navbar .logo a span{
-    color: crimson;
+    color: purple;
     transition: color 0.3s ease;
 }
 
@@ -62,10 +62,11 @@
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
+    pointer-events: auto;
 }
 
 .navbar .menu li a:hover{
-    color: crimson;
+    color: purple;
 }
 
 .navbar.navbar.sticky .menu li a:hover{
@@ -80,6 +81,31 @@
     display: none;
 }
 
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: purple;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* home section styling */
 .home{
     display: flex;
@@ -90,6 +116,13 @@
     color: black;
     min-height: 500px;
     font-family: 'Roboto Slab', sans-serif;
+}
+
+.home .home-content .icons{
+    display: inline-block;
+    font-size: 30px;
+    padding: 20px 0px;
+    color: purple
 }
 
 .home .max-width{
@@ -112,7 +145,7 @@
 }
 
 .home .home-content .text-3 span{
-    color: crimson;
+    color: purple;
     font-weight: 500;
 }
 
@@ -124,7 +157,7 @@ section{
     display: flex;
     background: url("images/waneelllaRooftop.gif") no-repeat center;
     background-size: cover;
-    height: 100vh;
+    height: 150vh;
     background-attachment: fixed;
     font-family: 'Roboto Slab', sans-serif;
 }
@@ -134,10 +167,12 @@ section{
     text-align: center;
     font-size: 40px;
     font-weight: 500;
+    margin: auto;
     margin-bottom: 60px;
     padding-bottom: 20px;
     font-family: 'Spartan', sans-serif;
     color: #fff;
+    backdrop-filter: blur(2px);
 }
 
 .projects .DnD{
@@ -147,20 +182,13 @@ section{
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px;
+    padding-top: 100px;
     font-family: 'Spartan', sans-serif;
     color: #fff;
+    backdrop-filter: blur(2px);
 }
 
-.projects .title::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width: 180px;
-    height: 3px;
-    background: #111;
-    transform: translateX(-50%);
-}
+
 
 .projects .title::after{
     content: "ML Dashcam";
@@ -168,7 +196,23 @@ section{
     bottom: -10px;
     left: 50%;
     font-size: 20px;
-    color: crimson;
+    font-weight: 1000;
+    color: purple;
+    padding: 5px;
+    /* background: #111; */
+    transform: translateX(-50%);
+}
+
+
+
+.projects .DnD::after{
+    content: "Android Application";
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    font-size: 20px;
+    font-weight: 1000;
+    color: purple;
     padding: 5px;
     /* background: #111; */
     transform: translateX(-50%);
@@ -194,32 +238,365 @@ section{
 
 .projects .PICamRU-content .right{
     width: 50%;
-    color: #fff;
+    color: #111;
+    border-style: solid;
+    border-radius: 5px;
+    background: rgba(34, 34, 34, 0.15);
+    backdrop-filter: blur(3px);
 }
 
 .projects .PICamRU-content .right .text{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
+    margin: 10px;
+    color: #fff;
 }
 
 .projects .PICamRU-content .right .text span{
-    color: crimson;
+    color: purple;
+    margin: 10px;
 }
 .projects .PICamRU-content .right p{
     text-align: justify;
+    color: #fff;
+    margin: 10px;
+}
+
+.projects .PICamRU-content .right p span{
+    color: purple;
+    font-weight: 600;
+}
+
+.projects .DnD-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects .DnD-content .right{
+    width: 45%;
+}
+
+.projects .DnD-content .right img{
+    height: 300px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.projects .DnD-content .left{
+    width: 50%;
+    color: #111;
+    border-style: solid;
+    border-radius: 5px;
+    background: rgba(34, 34, 34, 0.15);
+    backdrop-filter: blur(3px);
+}
+
+.projects .DnD-content .left .text{
+    color: #fff;
+    margin: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.projects .DnD-content .left .text span{
+    color: purple;
+}
+
+.projects .DnD-content .left p{
+    text-align: justify;
+    color:  #fff;
+    margin: 10px;
 }
 
 
+
+
+
+/* about section styling */
+.collcurr{
+    display: flex;
+    background: url("images/yourName.gif") no-repeat center;
+    background-size: cover;
+    height: 150vh;
+    background-attachment: fixed;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.collcurr div+div{
+    margin-top: 100px;
+}
+
+.collcurr .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Spartan', sans-serif;
+    color: #fff;
+    border-style: hidden;
+    border-radius: 5px;
+    background: rgba(34, 34, 34, 0.082);
+    backdrop-filter: blur(3px);
+}
+
+
+.collcurr .title::after{
+    content: "ECE'21";
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    font-size: 20px;
+    font-weight: 1000;
+    color: purple;
+    padding: 5px;
+    /* background: #fff */
+    transform: translateX(-50%);
+}
+
+.collcurr .title span{
+    color: crimson;
+    font-weight: 500;
+}
+
+.collcurr .software{
+    width: calc(100% - 20px);
+}
+
+.collcurr .hardware{
+    width: calc(100% - 20px);
+}
+
+
+.collcurr  .card{
+    background: rgba(34, 34, 34, 0.15);
+    backdrop-filter: blur(2px);
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    padding: 30px 100px 20px 100px;
+    
+}
+
+.collcurr .card i{
+    font-size: 50px;
+    color: purple;
+}
+
+.collcurr .card .text{color: #fff;}
+.collcurr .card .text .h4{font-weight: 600;}
+.collcurr .card .text .p{font-weight: 200;}
+
+
+.collcurr .software .software-grid{
+    padding: 3rem 2rem 0 0;
+    margin-right: 0vw;
+    margin-left: -4vw;
+    width: 75vw;
+}
+.collcurr .software .software-grid h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.collcurr .software .software-grid ul{
+    display: grid;
+    grid-template: 1fr / repeat(3,1fr);     
+    grid-gap: 2rem;
+    grid-row-gap: 1rem;
+}
+.collcurr .software .software-grid li{
+    list-style: none;
+    display:list-item;
+    margin-top: 10;
+    font-size: 1rem;
+    font-weight: 500 ;
+    line-height: 1.5em;
+    color: var(--gray);
+}
+
+.collcurr .hardware .hardware-grid{
+    padding: 3rem 2rem 0 0;
+    margin-right: 0vw;
+    margin-left: -4vw;
+    width: 75vw;
+}
+.collcurr .hardware .hardware-grid h4{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.collcurr .hardware .hardware-grid ul{
+    display: grid;
+    grid-template: 1fr / repeat(3,1fr);     
+    grid-gap: 2rem;
+    grid-row-gap: 1rem;
+}
+.collcurr .hardware .hardware-grid li{
+    list-style: none;
+    display:list-item;
+    margin-top: 10;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: var(--gray);
+}
+
+/* bonus section styling */
+.bonus{
+    display: flex;
+    background: url("images/haikyuuMinimalism.png") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    font-family: 'Roboto Slab', sans-serif;
+    
+}
+
+.bonus .max-width{
+    margin: 0 auto auto 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between ;
+    
+}
+.bonus .bonus-grid .columns{margin-bottom: 2rem; width: 90%;}
+.bonus .bonus-grid h5{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+
+.bonus .bonus-grid ul{
+    display: grid;
+    grid-template: 1fr / repeat(2,1fr);     
+    grid-gap: 2rem;
+    grid-row-gap: 1rem;
+    /* border-style: solid; */
+}
+
+.bonus .bonus-grid li{
+    list-style: none;
+    display:list-item;
+    margin-top: 10;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--gray);
+    color: azure;
+}
+
+.bonus .bonus-grid li span{
+    font-size: smaller;
+}
+
+.bonus .coding-anime{
+    height: auto;
+    width: auto;
+    object-fit: cover;
+    margin-left: -170px;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+
+.bonus .plab img{
+    height: 250px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0px 40px;
+}
+
+.bonus .jp img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+
+.bonus .tt img{
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-right: 50px;
+}
+
+.bonus .thousand img{
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-left: -10px;
+}
+
+/* .bonus .dld img{
+    height: 250px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.bonus .plab img{
+    height: 250px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+} */
+
+
 /* responsive media query start */
+@media (max-width: 1332px){
+    .bonus .thousand{
+        display: none;
+    }
+}
+
 @media (max-width: 1300px){
     .home .max-width{
         margin-left: 0px;
     }
 }
 
+@media (max-width: 1104px){
+    .bonus .extra{
+        margin: 0px 10px 0px 10px;
+    }
+    .bonus .coding-anime{
+        margin: 0px 20px 0px -10px;
+    }
+
+    .bonus .jp{
+        margin: -250px auto 0px auto;
+    }
+}
+
+@media (max-width: 1194px){
+    .bonus .plab img{
+        margin: 0px 0px 0px auto;
+    }
+    .bonus .jp img{
+        margin: 0px 250px;
+    }
+    .bonus .tt{
+        display: none;
+    }
+}
+
 @media (max-width: 1160px){
-    .projects .projects-content .left img{
+    .projects .PICamRU-content .left img{
+        height: 300px;
+        width: 400px;
+    }
+
+    .projects .DnD-content .right img{
         height: 300px;
         width: 400px;
     }
@@ -232,8 +609,6 @@ section{
 }
 
 @media (max-width: 947px){
-    /* side-padding of navbar*/
-    
 
     .menu-btn{
         display: block;
@@ -279,22 +654,51 @@ section{
         max-width: 800px;
     }
 
-    .projects .projects-content .column{
+    .projects .PICamRU-content .column{
         width: 100%;
     }
     
-    .projects .projects-content .left{
+    .projects .PICamRU-content .left{
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
     }
 
-    .projects .projects-content .right{
+    .projects .PICamRU-content .right{
+        flex: 100%;
+    }
+
+    .projects .DnD-content .column{
+        width: 100%;
+    }
+
+    .projects .DnD-content .right{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .projects .DnD-content .left{
         flex: 100%;
     }
 }
 
-@media (max-width: 690px){
+@media (max-width: 780px){
+    .bonus .plab{
+        display: none;
+    }
+
+    .bonus .coding-anime{
+        margin-top: 100px;
+    }
+
+    .bonus .jp{
+        margin-top: -180px;
+    }
+
+}
+
+@media (max-width: 720px){
     .max-width{
         padding: 0 23px;
     }
@@ -306,7 +710,24 @@ section{
     .home .home-content .text-3{
         font-size: 32px;
     }
+
+    .projects{
+        display: flex;
+        background: url("images/waneelllaRooftop.gif") no-repeat center;
+        background-size: cover;
+        height: 300vh;
+        background-attachment: fixed;
+        font-family: 'Roboto Slab', sans-serif;
+    }
     
+}
+
+@media (max-width: 660px){
+    .bonus .bonus-grid ul{
+        grid-gap: 0.5rem;
+    }
+
+    .collcurr .software .software-grid ul {width: 150px;}
 }
 
 @media (max-width: 500px){
