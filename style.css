@@ -334,7 +334,7 @@ section{
 .collcurr .title{
     position: relative;
     text-align: center;
-    font-size: 40px;
+    font-size: 70px;
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px;
@@ -350,9 +350,9 @@ section{
 .collcurr .title::after{
     content: "ECE'21";
     position: absolute;
-    bottom: -17px;
+    bottom: -45px;
     left: 50%;
-    font-size: 20px;
+    font-size: 50px;
     font-weight: 1000;
     color: purple;
     padding: 5px;
@@ -375,18 +375,19 @@ section{
 
 
 .collcurr  .card{
-    background: rgba(34, 34, 34, 0.15);
-    backdrop-filter: blur(2px);
+    
     text-align: center;
     border-radius: 5px;
-    border-style: solid;
+    /* border-style: solid; */
     padding: 30px 100px 20px 100px;
     
 }
 
 .collcurr .card i{
-    font-size: 50px;
+    font-size: 100px;
     color: purple;
+    background: rgba(34, 34, 34, 0.15);
+    backdrop-filter: blur(2px);
 }
 
 .collcurr .card .text{color: #fff;}
@@ -395,18 +396,21 @@ section{
 
 
 .collcurr .software .software-grid{
-    padding: 3rem 2rem 0 0;
+    padding: 2rem 0 0 0;
     margin-right: 0vw;
-    margin-left: -4vw;
+    margin-left: -19.5vw;
     width: 75vw;
+    background: rgba(34, 34, 34, 0.15);
+    backdrop-filter: blur(2px);
 }
 .collcurr .software .software-grid h4{
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 .collcurr .software .software-grid ul{
     display: grid;
+    object-fit: contain;
     grid-template: 1fr / repeat(3,1fr);     
     grid-gap: 2rem;
     grid-row-gap: 1rem;
@@ -415,20 +419,22 @@ section{
     list-style: none;
     display:list-item;
     margin-top: 10;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500 ;
     line-height: 1.5em;
     color: var(--gray);
 }
 
 .collcurr .hardware .hardware-grid{
-    padding: 3rem 2rem 0 0;
+    padding: 2rem 0 0 0;
     margin-right: 0vw;
-    margin-left: -4vw;
+    margin-left: -19.5vw;
     width: 75vw;
+    background: rgba(34, 34, 34, 0.15);
+    backdrop-filter: blur(2px);
 }
 .collcurr .hardware .hardware-grid h4{
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -442,7 +448,7 @@ section{
     list-style: none;
     display:list-item;
     margin-top: 10;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.5em;
     color: var(--gray);
@@ -456,16 +462,16 @@ section{
     height: 100vh;
     background-attachment: fixed;
     font-family: 'Roboto Slab', sans-serif;
-    
+   
+    margin: auto;
 }
 
 .bonus .max-width{
-    margin: 0 auto auto 40px;
+    margin: 0 auto auto 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between ;
-    
 }
 .bonus .bonus-grid .columns{margin-bottom: 2rem; width: 90%;}
 .bonus .bonus-grid h5{
@@ -477,7 +483,7 @@ section{
 .bonus .bonus-grid ul{
     display: grid;
     grid-template: 1fr / repeat(2,1fr);     
-    grid-gap: 2rem;
+    grid-gap: 5rem;
     grid-row-gap: 1rem;
     /* border-style: solid; */
 }
@@ -486,7 +492,7 @@ section{
     list-style: none;
     display:list-item;
     margin-top: 10;
-    font-size: 1rem;
+    font-size: 2rem;
     line-height: 1.5em;
     color: var(--gray);
     color: azure;
@@ -500,8 +506,8 @@ section{
     height: auto;
     width: auto;
     object-fit: cover;
-    margin-left: -170px;
-    margin-right: 50px;
+    margin-left: 0px;
+    margin-right: 100px;
     border-radius: 5px;
 }
 
